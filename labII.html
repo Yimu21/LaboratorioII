@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratorio de Eventos - UGB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Interacción de Eventos en JavaScript</h1>
+    
+    <div class="contenedor-grid">
+        <div class="tarjeta azul" id="caja-click">
+            <h2>EVENTO AQUÍ</h2>
+            <p>¡Haz clic! (click)</p>
+        </div>
+
+        <div class="tarjeta amarillo" id="caja-hover">
+            <h2>EVENTO AQUÍ</h2>
+            <p>Pasa el mouse (mouseenter)</p>
+        </div>
+
+        <div class="tarjeta naranja" id="caja-doble">
+            <h2>EVENTO AQUÍ</h2>
+            <p>Doble clic (dblclick)</p>
+        </div>
+
+        <div class="tarjeta verde">
+            <h2>EVENTO AQUÍ</h2>
+            <p>Escribe algo (keydown)</p>
+            <input type="text" id="input-tecla">
+        </div>
+
+        <div class="tarjeta lila">
+            <h2>EVENTO AQUÍ</h2>
+            <p>Haz foco (focus)</p>
+            <input type="text" id="input-foco">
+        </div>
+
+        <div class="tarjeta rojo">
+            <h2>EVENTO AQUÍ</h2>
+            <p>Sal del cuadro (blur)</p>
+            <input type="text" id="input-blur">
+        </div>
+
+        <div class="tarjeta morado">
+            <h2>EVENTO AQUÍ</h2>
+            <p>Enviar (submit)</p>
+            <form id="mi-form">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="tarjeta rosa">
+            <h2>EVENTO AQUÍ</h2>
+            <p>Cambia valor (change)</p>
+            <select id="mi-select">
+                <option value="">Elige...</option>
+                <option value="A">Perro</option>
+                <option value="B">Gato</option>
+                <option value="C">Pez</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

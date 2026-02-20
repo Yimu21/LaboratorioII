@@ -2,62 +2,58 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Laboratorio de Eventos - UGB</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Laboratorio de Selectores - UGB</title>
+    <link rel="stylesheet" href="stilos.css">
 </head>
 <body>
-    <h1>Interacción de Eventos en JavaScript</h1>
+    <h1>Manejo de DOM y Selectores JS</h1>
     
     <div class="contenedor-grid">
-        <div class="tarjeta azul" id="caja-click">
-            <h2>EVENTO AQUÍ</h2>
-            <p>¡Haz clic! (click)</p>
+        <div class="tarjeta azul" id="caja-id">
+            <h2>ID Selector</h2>
+            <p>Haz clic aquí</p>
         </div>
 
-        <div class="tarjeta amarillo" id="caja-hover">
-            <h2>EVENTO AQUÍ</h2>
-            <p>Pasa el mouse (mouseenter)</p>
+        <div class="tarjeta amarillo tarjeta-clase">
+            <h2>Class Selector</h2>
+            <p>Pasa el mouse</p>
         </div>
 
-        <div class="tarjeta naranja" id="caja-doble">
-            <h2>EVENTO AQUÍ</h2>
-            <p>Doble clic (dblclick)</p>
-        </div>
+        <section class="tarjeta naranja">
+            <h2>Tag Selector</h2>
+            <p>Doble clic en la sección</p>
+        </section>
 
-        <div class="tarjeta verde">
-            <h2>EVENTO AQUÍ</h2>
-            <p>Escribe algo (keydown)</p>
-            <input type="text" id="input-tecla">
+        <div class="tarjeta verde" data-tipo="especial">
+            <h2>QuerySelector</h2>
+            <p>Escribe algo abajo</p>
+            <input type="text" class="input-estilo">
         </div>
 
         <div class="tarjeta lila">
-            <h2>EVENTO AQUÍ</h2>
-            <p>Haz foco (focus)</p>
-            <input type="text" id="input-foco">
+            <h2>querySelectorAll</h2>
+            <button class="btn-grupo">Botón 1</button>
+            <button class="btn-grupo">Botón 2</button>
         </div>
 
         <div class="tarjeta rojo">
-            <h2>EVENTO AQUÍ</h2>
-            <p>Sal del cuadro (blur)</p>
-            <input type="text" id="input-blur">
+            <h2>CSS Selector</h2>
+            <p>Haz foco en el campo</p>
+            <input type="email" id="email-campo">
         </div>
 
         <div class="tarjeta morado">
-            <h2>EVENTO AQUÍ</h2>
-            <p>Enviar (submit)</p>
-            <form id="mi-form">
+            <h2>Form Selector</h2>
+            <form id="form-datos">
                 <button type="submit">Enviar</button>
             </form>
         </div>
 
         <div class="tarjeta rosa">
-            <h2>EVENTO AQUÍ</h2>
-            <p>Cambia valor (change)</p>
-            <select id="mi-select">
-                <option value="">Elige...</option>
-                <option value="A">Perro</option>
-                <option value="B">Gato</option>
-                <option value="C">Pez</option>
+            <h2>Value Selector</h2>
+            <select id="opciones">
+                <option value="op1">Opción 1</option>
+                <option value="op2">Opción 2</option>
             </select>
         </div>
     </div>

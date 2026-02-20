@@ -7,7 +7,7 @@ body {
 
 .contenedor-grid {
     display: grid;
-    grid-template-columns: repeat(2, 340px); /* 2 columnas exactas */
+    grid-template-columns: repeat(2, 340px); 
     gap: 20px;
     justify-content: center;
     margin-top: 30px;
@@ -16,14 +16,14 @@ body {
 .tarjeta {
     padding: 30px;
     border-radius: 15px;
-    border: 6px solid white; /* Borde blanco grueso de la imagen */
+    border: 6px solid white; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .tarjeta h2 { margin: 0; color: #555; font-size: 20px; }
 .tarjeta p { font-size: 14px; color: #444; margin: 10px 0; }
 
-/* Colores pastel */
+
 .azul { background-color: #bde0e8; }
 .amarillo { background-color: #fdf2b3; }
 .naranja { background-color: #fce1bc; }

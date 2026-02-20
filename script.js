@@ -1,28 +1,36 @@
-// 1. Click
-document.getElementById('caja-click').addEventListener('click', () => alert("¡Clic detectado!"));
+// 1. getElementById
+const cajaId = document.getElementById('caja-id');
+cajaId.addEventListener('click', () => cajaId.style.borderRadius = "50%");
 
-// 2. Mousemove (Divertido)
-document.getElementById('caja-hover').addEventListener('mousemove', function(e) {
-    this.style.backgroundColor = `rgb(${e.offsetX}, 220, 200)`;
+// 2. getElementsByClassName
+const cajasClase = document.getElementsByClassName('tarjeta-clase');
+cajasClase[0].addEventListener('mouseenter', () => cajasClase[0].style.backgroundColor = "#fff");
+
+// 3. getElementsByTagName
+const secciones = document.getElementsByTagName('section');
+secciones[0].addEventListener('dblclick', () => alert("Sección seleccionada por etiqueta"));
+
+// 4. querySelector (por atributo CSS)
+const inputEspecial = document.querySelector('[data-tipo="especial"] input');
+inputEspecial.addEventListener('input', (e) => console.log(e.target.value));
+
+// 5. querySelectorAll (para múltiples elementos)
+const botones = document.querySelectorAll('.btn-grupo');
+botones.forEach(btn => {
+    btn.addEventListener('click', () => btn.style.fontWeight = "bold");
 });
 
-// 3. Doble click
-document.getElementById('caja-doble').addEventListener('dblclick', () => alert("¡Doble clic!"));
+// 6. querySelector (Selector CSS complejo)
+const emailField = document.querySelector('div.rojo #email-campo');
+emailField.addEventListener('focus', () => emailField.style.border = "2px solid red");
 
-// 4. Keydown
-document.getElementById('input-tecla').addEventListener('keydown', (e) => console.log("Tecla: " + e.key));
-
-// 5. Focus
-document.getElementById('input-foco').addEventListener('focus', (e) => e.target.style.background = "#fff");
-
-// 6. Blur
-document.getElementById('input-blur').addEventListener('blur', () => alert("Saliste del campo"));
-
-// 7. Submit
-document.getElementById('mi-form').addEventListener('submit', (e) => {
+// 7. Selección de formulario
+const formulario = document.querySelector('#form-datos');
+formulario.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert("Formulario enviado");
+    alert("Formulario detectado");
 });
 
-// 8. Change
-document.getElementById('mi-select').addEventListener('change', (e) => alert("Cambiado a: " + e.target.value));
+// 8. getElementById para Select
+const miSelect = document.getElementById('opciones');
+miSelect.addEventListener('change', () => alert("Cambio a: " + miSelect.value));
